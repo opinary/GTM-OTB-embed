@@ -1,5 +1,5 @@
 homepage: "https://opinary.com"
 documentation: "https://opinary.com"
 versions:
-  - sha: 15a186b11c96e0e870642699022eb50c5fded90d
+  - sha: 70204d99ba71d8daa3569b1cd665ecd647b5efab
     changeNotes: Init Template.
