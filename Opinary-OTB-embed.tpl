@@ -37,7 +37,7 @@ ___TEMPLATE_PARAMETERS___
   {
     "type": "TEXT",
     "name": "styles",
-    "displayName": "Custom styles for poll wrapper",
+    "displayName": "Custom inline styles for poll wrapper (optional)",
     "simpleValueType": true
   }
 ]
@@ -212,6 +212,6 @@ scenarios: []
 
 ___NOTES___
 
-Created on 9/18/2020, 3:52:36 PM
+Created on 9/18/2020, 4:09:20 PM
 
 
