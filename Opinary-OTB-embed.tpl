@@ -18,7 +18,7 @@ ___INFO___
     "id": "brand_dummy",
     "displayName": ""
   },
-  "description": "It required HTML tag:\n\u003cdiv id\u003d\"opinary-otb-embed\"\u003e\u003c/div\u003e\nin a place where a poll should be displayed",
+  "description": "",
   "containerContexts": [
     "WEB"
   ]
@@ -27,12 +27,30 @@ ___INFO___
 
 ___TEMPLATE_PARAMETERS___
 
-[]
+[
+  {
+    "type": "TEXT",
+    "name": "elementIndicator",
+    "displayName": "Id or class of an element after opinary poll should be injected (optional)",
+    "simpleValueType": true
+  },
+  {
+    "type": "TEXT",
+    "name": "styles",
+    "displayName": "Custom styles for poll wrapper",
+    "simpleValueType": true
+  }
+]
 
 
 ___SANDBOXED_JS_FOR_WEB_TEMPLATE___
 
 const injectScript = require('injectScript');
+const log = require('logToConsole');
+const setInWindow = require('setInWindow');
+log('data', data);
+setInWindow('opinaryOtbElementIndicator', data.elementIndicator, true);
+setInWindow('opinaryOtbStyles', data.styles, true);
 injectScript("https://compass.pressekompass.net/scripts/embedotb.js");
 data.gtmOnSuccess();
 
@@ -65,6 +83,124 @@ ___WEB_PERMISSIONS___
       "isEditedByUser": true
     },
     "isRequired": true
+  },
+  {
+    "instance": {
+      "key": {
+        "publicId": "access_globals",
+        "versionId": "1"
+      },
+      "param": [
+        {
+          "key": "keys",
+          "value": {
+            "type": 2,
+            "listItem": [
+              {
+                "type": 3,
+                "mapKey": [
+                  {
+                    "type": 1,
+                    "string": "key"
+                  },
+                  {
+                    "type": 1,
+                    "string": "read"
+                  },
+                  {
+                    "type": 1,
+                    "string": "write"
+                  },
+                  {
+                    "type": 1,
+                    "string": "execute"
+                  }
+                ],
+                "mapValue": [
+                  {
+                    "type": 1,
+                    "string": "opinaryOtbStyles"
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  }
+                ]
+              },
+              {
+                "type": 3,
+                "mapKey": [
+                  {
+                    "type": 1,
+                    "string": "key"
+                  },
+                  {
+                    "type": 1,
+                    "string": "read"
+                  },
+                  {
+                    "type": 1,
+                    "string": "write"
+                  },
+                  {
+                    "type": 1,
+                    "string": "execute"
+                  }
+                ],
+                "mapValue": [
+                  {
+                    "type": 1,
+                    "string": "opinaryOtbElementIndicator"
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "clientAnnotations": {
+      "isEditedByUser": true
+    },
+    "isRequired": true
+  },
+  {
+    "instance": {
+      "key": {
+        "publicId": "logging",
+        "versionId": "1"
+      },
+      "param": [
+        {
+          "key": "environments",
+          "value": {
+            "type": 1,
+            "string": "debug"
+          }
+        }
+      ]
+    },
+    "isRequired": true
   }
 ]
 
@@ -76,6 +212,6 @@ scenarios: []
 
 ___NOTES___
 
-Created on 9/17/2020, 12:24:58 PM
+Created on 9/18/2020, 3:52:36 PM
 
 
