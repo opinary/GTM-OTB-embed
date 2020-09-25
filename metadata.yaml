@@ -1,5 +1,5 @@
 homepage: "https://opinary.com"
 documentation: "https://opinary.com"
 versions:
-  - sha: d3fd80ff215e152461c6e28464ba7ee637e5c010
-    changeNotes: Update params description.
+  - sha: 715e65c567aa24bddc746c033c92d8dae785f5d5
+    changeNotes: Update readme and fix template file name.
