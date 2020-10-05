@@ -32,7 +32,7 @@ ___TEMPLATE_PARAMETERS___
   {
     "type": "TEXT",
     "name": "elementIndicator",
-    "displayName": "Id or class of an element after opinary poll should be injected (optional)",
+    "displayName": "Id or class of an element after which opinary poll should be injected (optional)",
     "simpleValueType": true
   },
   {
@@ -196,6 +196,6 @@ scenarios: []
 
 ___NOTES___
 
-Created on 9/25/2020, 3:48:02 PM
+Created on 10/5/2020, 12:31:05 PM
 
 
